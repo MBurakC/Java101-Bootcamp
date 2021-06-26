@@ -3,8 +3,8 @@ public class Ucakbileti {
     public static void main(String[] args) {
         Scanner k = new Scanner(System.in);
         System.out.print("Mesafeyi Km turunden giriniz: "); int km = k.nextInt();
-        System.out.print("Yasinizi giriniz: "); int yas = k.nextInt();
-        System.out.print("Yolculuk tipi seciniz (1-Tek Yonlu ucus||2-Gidiş Dönüş): "); int secim = k.nextInt();
+        System.out.print("Yaşınızı giriniz: "); int yas = k.nextInt();
+        System.out.print("Yolculuk tipi seciniz (1-Tek Yönlü uçuş ||2-Gidiş Dönüş): "); int secim = k.nextInt();
         if(km>0 && yas>0 && secim==1 || secim==2){
             int baslangicFiyati = (int) (km * 0.10);
             System.out.println("Normal Tutar: "+baslangicFiyati);
@@ -22,7 +22,8 @@ public class Ucakbileti {
                 int indirimli = (int) (baslangicFiyati*0.30);
                 baslangicFiyati -= indirimli;
                 System.out.println("İndirimli tutar: "+baslangicFiyati);
-            }else if(yas<12 && secim==2){
+            }
+            else if(yas<12 && secim==2){
                 int indirimli = (int) (baslangicFiyati*0.50);
                 int indirimliTutar = baslangicFiyati-indirimli;
                 int donusIndirim = (int) (indirimliTutar*.20);
@@ -45,7 +46,7 @@ public class Ucakbileti {
             }
         }
            else {
-            System.out.println("Hatalı Veri Girdiniz");
+            System.out.println("Hatalı Bilgi Girdiniz");
         }
     }
 }
